@@ -31,7 +31,7 @@ streamlit.header('fruityvice fruit advice')
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 #streamlit.text(fruityvice_response)
 
 # write your own comment -what does the next line do? 
