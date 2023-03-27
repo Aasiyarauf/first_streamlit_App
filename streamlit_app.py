@@ -46,9 +46,9 @@ try:
     
     
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * from from load list contain")
-my_data_row = my_cur.fetchone()
-streamlit.text("the fruit load list contain")
-streamlit.text(my_data_row)
+    my_cur = my_cnx.cursor()
+   my_cur.execute("SELECT * from from load list contain")
+   my_data_row = my_cur.fetchall()
+   streamlit.header("the fruit load list contain")
+   streamlit.dataframe(my_data_row)
     
