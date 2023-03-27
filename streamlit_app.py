@@ -31,12 +31,12 @@ streamlit.dataframe( my_fruit_list)
 
 # Display the table on the page.
 streamlit.header('fruityvice fruit advice')
-try
+try:
 fruit_choice = streamlit.text_input('What fruit would you like information about?')
 if not fruit_choice:
  streamlit.error("please select the fruit to get the infoemation.")
 #streamlit.write('The user entered ', fruit_choice)
-else
+else:
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 #streamlit.text(fruityvice_response)
 
