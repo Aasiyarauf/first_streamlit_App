@@ -56,7 +56,7 @@ if streamlit.button("get fruit load list"):
     streamlit.dataframe(my_data_rows)
 
 #allow the ned user to add the fruit
-def insert_row_snowflake(new_fruit):_from_functo
+def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
         my_cur_execute("insert into fruit load list values('from streamlit')")
         return "thanks for adding"+new_fruit
